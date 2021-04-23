@@ -1,250 +1,127 @@
 <html>
-    <head>
-        <title> Kennesaw State University Computer Research </title>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" type="text/css" href="mycss.css">
-        </head>
-        <body>  
-        <div class="header">
-              <a href="https://ccse.kennesaw.edu/it/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Kennesaw_State_Owls_logo.svg/1200px-Kennesaw_State_Owls_logo.svg.png" alt="Ksu Logo" width="190" height="120"> 
-              </a> <h1>  Kennesaw State Research Department </h1> 
-         </div>
-        
-        <div id="menu">
-            <a href="index.html">Home</a>
-            <a href="faculty.html">Faculty</a>
-            <a href="research.html">Research</a>
-            <a href="milestone2.html"> Job Offers</a>
-        </div>
+<title> Kennesaw State University Computer Research </title>
+<header>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="mycss.css">
+</header>
+
 <body>
+    <div class="header">
+        <a href="https://ccse.kennesaw.edu/it/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Kennesaw_State_Owls_logo.svg/1200px-Kennesaw_State_Owls_logo.svg.png" alt="Ksu Logo" width="190" height="120"> 
+             </a> <h1>  Milestone #2 </h1> 
+     </div>
 
-        <center>
-        <form>
-            <p1> Attention Kennnesaw Students! If you are interested in a Student Assist position see if you meet the grade requirments below.</p1>
-            </br>
-            </br>
-            <p1>Graduation Status: </p1>
+    <div id="menu">
+        <a href="index.html">Home</a>
+        <a href="faculty.html">Milestone #2 Research</a>
+        <!--<a href="research.html">Research</a>-->
+    </div>
 
-        <select id="status" onchange='statusChage(this.value)'>
-            <option value="a">select</option>
-            <option value="b">Under Graduate</option>
-            <option value="c">Graduate</option>
-        </select>
-        </br>
-        </br>
-            <table id="table" border="1">
-            <tr>
-                <th>
-                Course
-                </th>
-                <th>
-                Grade obtained
-                </th>
-            </tr>
-        
-        <tr>
-        <th>
-                <label id="class1"></label>
-                </th>
-                <th>
-                <select id="class1grade">
-                    <option value="4">a</option>
-                    <option value="3">b</option>
-                    <option value="2">c</option>
-                    <option value="1">d</option>
-                <option value="0">f</option>
-                </select>
-        </th>
-        </tr>
-        <tr>
-        <th>
-                <label id="class2"></label>
-                </th>
-                <th>
-                <select id="class2grade">
-                    <option value="4">a</option>
-                    <option value="3">b</option>
-                    <option value="2">c</option>
-                    <option value="1">d</option>
-                <option value="0">f</option>
-                        </select>
-        </th>
-        </tr>
-        
-        <tr>
-        <th>
-        <label id="class3"></label>
-        </th>
-        <th>
-                <select id="class3grade">
-                    <option value="4">a</option>
-                    <option value="3">b</option>
-                    <option value="2">c</option>
-                    <option value="1">d</option>
-                <option value="0">f</option>
-                        </select>
-        </th>
-        </tr>
-        <tr>
-        <th>
-        <label id="class4"></label>
-        </th>
-        <th>
-                <select id="class4grade">
-                    <option value="4">a</option>
-                    <option value="3">b</option>
-                    <option value="2">c</option>
-                    <option value="1">d</option>
-                <option value="0">f</option>
-                        </select>
-        </th>
-        </tr>
-        </table>
-        </br>
+<h3 id="link">
+</a>
+</h3>
+<p>
+Determine if IDAPro and WinDbg are still effective in today's environment. 
+<br />
+<br />  For this project we wanted to make sure that these tools are still up to date in our ever-changing environment. Yes, both tools are still great choice for any cybersecurity engineer. ​
 
-        </form>
+​
 
-        <button id="evaluate" type="button" onclick="evalute()">Evaluate</button>
-        </br>
-        </br>
-        <label id="msg"></label>
-        </center>
+ WinDbg is the debugger of choice for Windows. It is best known for its kernel level debugging but is also very powerful for non-kernel level debugging.​
 
-        <script>
-         document.getElementById("table").style.visibility = "hidden";
-         document.getElementById("evaluate").style.visibility = "hidden";
-         function statusChage(value) {
+IDAPro – Is considered by many to be the best one of the best tools to reverse engineer malware on the market. This is because the it is very stable, has no major flaws, and can is capable of reverse engineering an astonishing amount of different malware ("Aslani").
+<br />
+<br />Research & document how malware evades detection.
+<br />
+<br />Stalling delays – This technique is when a piece of malware will remain idle in order to defeat timer-based scans ("Blaine"). ​
 
-                if(value == 'b')
-                {
-                    document.getElementById("table").style.visibility = "visible";
-                    document.getElementById("evaluate").style.visibility = "visible";
-                    document.getElementById("class1").innerHTML = "CSE 3203 Mobile System Overview";
-                    document.getElementById("class2").innerHTML = "IT 4213 Mobile Web Development";
-                    document.getElementById("class3").innerHTML = "IT 4153 Advanced Database";
-                    document.getElementById("class4").innerHTML = "IT 4713 BI Systems";
-                }
+Action required delays -  Much like stalling delays this tactic will have the piece of malware be idle. Except this tactic will only execute barring a certain function performed by the user ("Blaine"). Almost all sandboxes are not able to detect this malware until it is too late.​
 
-                if(value == 'c')
-                {
-                    document.getElementById("table").style.visibility = "visible";
-                    document.getElementById("evaluate").style.visibility = "visible";
-                    document.getElementById("class1").innerHTML = "IT 6203 IT Design Studio";
-                    document.getElementById("class2").innerHTML = "IT 6753 Advanced Web Development";
-                    document.getElementById("class3").innerHTML = "IT 6713 Business Intelligence";
-                    document.getElementById("class4").innerHTML = "IT 7113 Data Visualization";
-                }
+Intelligent suspension of malware - This sophisticated evasion technique is used for when the malware has detected a sandbox on the system ("Blaine"). The malware will suspend all malicious actives until the host machine has been fully compromised. Only then will the malware start injecting and modifying code, decrypting files, and move laterally across a network ("Blaine").​
 
-                if(value == 'a')
-                {
-                    document.getElementById("table").style.visibility = "hidden";
-                    document.getElementById("evaluate").style.visibility = "hidden";
-                }
-                }
+Fragmentation - This  technique is when a piece of malware will split into fragments in order to avoid detection from a sandbox. The sandbox will scan each of the separate fragments and not detect them as malicious. The malware will only run once the fragments are reassembled after the sandbox ("Blaine").
+<br />
+<br />Research & document how malware evades detection
+<br />
+<br />Rootkits – The rootkit is an application(or multiples) that will use tactics to hide its malicious code on the lower layers of the operating system ("Blaine").​
 
-                function evalute()
-                {
-                    var a=document.getElementById("class1grade").value;
-                    var b=document.getElementById("class2grade").value;
-                    var c=document.getElementById("class3grade").value;
-                    var d=document.getElementById("class4grade").value;
-                    var uaverage, uaverage2;
-                
-                if(document.getElementById("status").value=='b')
-                {
-                uaverage = (Number(a)+Number(b))/ 2;
-                uaverage2 = (Number(c)+Number(d))/ 2;
+Social Engineering - Hackers can use social engineering tactic to trick a user into willingly downloading malware on their system. This tactic plays to the needs, wants, and weaknesses of potential victims.​
+
+Phishing Attacks – A form of social engineering in the form of an email. Tricks the user with a convincing email into downloading a malicious file.​
+
+Certain malware will only execute after a system reboot has been performed. This is almost impossible for a sandbox to be able to detect. 
+<br />
+<br />Research & document how malware evades detection
+<br />
+<br />One way that malware evades detection is by looking for features that are present in a real system, but not a sandbox. These features can include CPU Core Counts, the digital system signature, and the availability of certain programs.​
+
+Certain types of malware can change or encrypt its code.​
+
+Fast Fluxing - Changing DNS and IP addresses to bypass blacklists.​
+
+Malware is growing ever cleverer and quickly learning work arounds for sandboxing environments. 
+</p>
+
+<h3 id="link">
+
+</a>
+</h3>
+<p>
+    
+    <br />
+    <br />How to better protect and mitigate against the risks of malware
+    <br /> 
+    <br /> Extend/Change sleep duration: By extending the analysis time, you can potentially catch malware exploiting timing- based techniques.​
+
+    Simulate Human Interaction: Most sandboxes do not simulate human interaction by default, however with the increasing prevalence of malware evasion tactics involving user interaction, adding user-like actions to the analysis process is a necessity.​
+
+    Add real hardware/environmental artifacts: By including hardware information in your Sandbox, you could thwart Malware that attempts to detect Operating System characteristics to determine if the system is real or virtual.
+    
+    <br />How to better protect and mitigate against the risks of malware
+    <br />
+    <br />Perform static code analysis: Analyzing the code of the suspicious file could reveal common malware evasion tactics or encrypted pieces of code that simply subjecting it to the Sandbox wouldn’t detect.​
+
+    Fingerprint Analysis: “Fingerprinting” technology allows you to analyze a file for common indicators of malicious code, as well as documenting the evasion tactics of the current piece of malware for future reference.​
+
+    Behavior-based analysis: Sandboxes utilizing BBA tactics interact with the Malware and emulate host computer processes in order to detect Malware Evasion techniques, once discovered, the malicious code is countered.​
+
+    Kernel Analysis: As mentioned above, some forms of Malware are designed to inject malicious code into the lower levels of the OS. By implementing Kernel Analysis, you can prevent malware from getting into the Kernel​
+
+    Implement Machine Learning: Analysis based on Machine Learning Algorithms can detect Malware Evasion techniques before their execution.
+    Using a code emulator: Code emulators  directly handles each instruction executed within the analysis system and is thus able to tamper with the execution in any way the system wants to. This is done in a way that is completely transparent and invisible to the malware program under analysis.​
+
+    Tampering with the outcome of string comparisons: When tampering with the outcome of string comparisons(e.g., when used to compare the username of the system) and forcing executions down a path that reveals a program’s true intent. It can also detect when a program is executing instructions that allow fingerprinting the hardware configuration and manipulate the effect of this code in a way to trigger additional behavior, helping it to correctly classify malware.
+    <br />
+    <br />Companies’ main goal(s) when it comes to protection from malware infection should be to:​
+
+         - Protect sensitive information and critical business workflows.​
+
+         - Maintain the trust of customers, partners, and shareholders.​
+
+          - Prevent huge monetary losses due to damage or ransom payments.
+    <br />
+    <br />Cybersecurity policies are essential to any business because data breaches and cyber-attacks can become costly for a business to recover from. Also, employees are viewed as the weakest link when it comes to a company’s security. This is due to employees sharing passwords, clicking on malicious URLs and attachments, using unapproved cloud applications, and neglecting to encrypt sensitive files. Having certain security policies in place will allow employees to be more aware, decrease their vulnerability to security attacks, as well as maintain the secrecy and protection of the company’s data. 
+
+    Creation of Password Policies: Good, difficult-to-guess passwords are essential to computer security. A strong password has at least eight characters long which include letters, numbers, special characters and capitalization; and are changed infrequently. Create a company policy that includes these specifications as well as a strict timeframe for when passwords are changed. Whether that is every 3-6 months, twice a year, etc. ​
+
+    Creation of Equipment Use Policy: Set boundaries as far as what your staff members are permitted to do on company-owned equipment. To what extent can they use things like laptops and phones for personal purposes? Can they install software of their choosing? Will there be mandatory scans, backups, or encryption? Establish clear rules to ensure that employees understand the privileges they do and do not have when it comes to company equipment.​
+
+    Creation of Employee Separation Policy: Is your business doing anything to ensure that access to your network is effectively revoked immediately upon an employee’s departure? When an employee leaves—whether they’re your CEO or your receptionist—this termination policy must be enforced so that disgruntled former employees or any other unauthorized personnel cannot introduce malware to your system or access confidential data.
+
+    
+</p>
 
 
-                if(uaverage >3.2 && uaverage2 > 3.2)
-                {
+<p><br /></p>
 
-                     document.getElementById("msg").innerHTML = "Conratulations, You are eligible to apply for both jobs. Go online to kennesawstate.edu/joboffers to apply.";
-                }
-                else if(uaverage>3.2)
-                {
-                     document.getElementById("msg").innerHTML = "Conratulations, You are eligible to apply for the job position 1.  Go online to kennesawstate.edu/joboffers to apply";
-                }
-                else if(uaverage2>3.2)
-                {
-
-                    document.getElementById("msg").innerHTML = "Conratulations, You are eligible to apply for the job position 2.  Go online to kennesawstate.edu/joboffers to apply";
-                }
-                else
-                {
-                    document.getElementById("msg").innerHTML = "Sorry, you do not have the grade requirments to apply.";
-                }
-                }
-
-                if(document.getElementById("status").value=='c')
-                {
-                gaverage = (Number(a)+Number(b))/ 2;
-                gaverage2 = (Number(c)+Number(d))/ 2;
-
-                if(gaverage >3.7 && gaverage2 > 3.7)
-                {
-                    document.getElementById("msg").innerHTML = "Conratulations, You are eligible to apply for both jobs!";
-                }
-                else if(gaverage>3.7)
-                {
-
-                    document.getElementById("msg").innerHTML = "Conratulations, You are eligible to apply for the job position 1.  Go online to kennesawstate.edu/joboffers to apply";
-                }
-                else if(gaverage2>3.7)
-                {
-
-                     document.getElementById("msg").innerHTML = "Conratulations, You are eligible to apply for the job position 2.  Go online to kennesawstate.edu/joboffers to apply";
-                }
-                else
-                {
-                    document.getElementById("msg").innerHTML = "Sorry, you do not have the grade requirments to apply";
-                }
-                }
-
-                }
-            </script>
-
-                    function Backup()
-                    {
-                            if(job <= 3)
-                            {
-                                uaverage.backup("Send job to backup collection");
-                            } 
-
-                            else if(job > 3)
-                            {
-                                uaverage2.backup("Project is over due");
-                            }
-                            else
-                            {
-                                uaverage.backup("The file that you entered is not in regirsty key")
-                            }
-                    }
-
-
-                   function ECK_VPN()
-                   {
-                       <write-host>
-                           if host= ECK {
-                           add-VpnConnection -name "ECK-VPN"
-                           add -SSTP = tunneltype
-                           add -username = wpharr{
-                               if username = wpharr{
-                                   send to -SSTP
-                               }
-                               else {
-                                   print("Username is not avalid")
-                               }
-                           }
-                           else 
-                           {
-                               "Host not found"
-                           }
-                           }
-                       </write-host>
-                   }
-
-        </body>
-        </html>
+</body>
+<footer>
+    <div class="footer">
+        <p>This page and its content are for Group 8: Malware Analysis Using Reverse Engineering. 
+            <br /> This webpage is designed by: Will Pharr, and Kelton Reid; Published on Febuarary 1st, 2021
+      </p>
+    </div>
+    </footer>
+</html>
 

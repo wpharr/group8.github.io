@@ -1,0 +1,83 @@
+body 
+{
+    background-color:grey
+}
+
+a:link
+{
+    color:black;
+}
+
+header
+{
+    text-align: center;
+}
+
+h1
+{
+    color: azure;
+}
+
+h3
+{
+	font-family:Arial;
+	
+}
+
+h2
+{
+    text-align: center;
+}
+
+P
+{
+	font-family: Arial;
+}
+
+#menu
+{
+    text-align: center;
+    border: 1px solid black;
+    size: 30;
+}
+
+#menu a {
+    margin-right: 20px;
+}
+
+/* Style the footer */
+.footer {
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+#menu a:active
+{
+    color: yellow;
+}
+
+#menu a:hover {
+      color: red;
+  }
+
+#menu a
+  {
+      font-size: large;
+  }
+
+.header
+{
+    padding:10px;
+    background: url(background.jpg)
+}
+
+table, th, td
+{
+    border:1px solid black;
+}
+
+#link a:hover
+{
+color: pink;
+}
